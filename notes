@@ -1,0 +1,7 @@
+To export to PDF, 
+Press the D key on your keyboard when viewing any slide deck inside the Desktop to open the Desktop Document Generator. With one click you can then export your slide deck as a PDF document:
+
+Source: https://gitpitch.com/docs/work-offline/desktop#export-slide-decks-to-pdf
+
+To run gitpitch desktop:
+docker run -it -v /home/avuong/Documents/profile:/repo -p 9000:9000 gitpitch/desktop:pro
