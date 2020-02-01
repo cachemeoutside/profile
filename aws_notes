@@ -1,0 +1,21 @@
+# Get EKS authentication token
+aws eks get-token --cluster-name eks_cluster --profile cachemeoutside | jq -r '.status.token'
+
+# Put token into ENV
+export TOKEN=$(aws eks get-token --cluster-name eks_cluster --profile cachemeoutside | jq -r '.status.token')
+
+# Check API access
+curl -k -X GET https://7A1976C36017B9E61D16199121478B4B.gr7.us-west-2.eks.amazonaws.com/api --header "Authorization: Bearer $TOKEN"
+
+
+https://docs.aws.amazon.com/eks/latest/userguide/create-kubeconfig.html
+aws eks --region us-west-2 update-kubeconfig --name eks_cluster --profile cachemeoutside
+
+
+https://aws.amazon.com/premiumsupport/knowledge-center/eks-kubernetes-services-cluster/
+# Get Node information
+kubectl get nodes -o wide
+
+# Configuring ALB Ingress for EKS
+https://docs.aws.amazon.com/eks/latest/userguide/alb-ingress.html
+
