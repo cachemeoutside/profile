@@ -17,7 +17,7 @@
         <filter class="edu.illinois.library.cantaloupe.logging.ApplicationLogFilter" />
         <filter class="edu.illinois.library.cantaloupe.logging.StandardErrorLogFilter" />
         <encoder>
-            <pattern>%d{HH:mm:ss.SSS} [%thread] %highlight(%-5level) %cyan(%logger{15}) - %msg%n</pattern>
+            <pattern>AVTEST %d{HH:mm:ss.SSS} [%thread] %highlight(%-5level) %cyan(%logger{15}) - %msg%n</pattern>
         </encoder>
         <withJansi>true</withJansi>
     </appender>
@@ -37,7 +37,7 @@
         </if>
     </logger>
 
-    <root level="DEBUG">
+    <root level="INFO">
         <!--
         Access log appenders
         -->
