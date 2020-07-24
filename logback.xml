@@ -154,6 +154,7 @@
         <!-- Host name/address and port number which Flentd placed -->
         <remoteHost>192.168.2.11</remoteHost>
         <port>12225</port>
+        <contextName>${HOSTNAME}</contextName>
 
         <!-- [Optional] Configurations to customize Fluency's behavior: https://github.com/komamitsu/fluency#usage  -->
         <ackResponseMode>false</ackResponseMode>
@@ -174,7 +175,7 @@
         <useEventTime>true</useEventTime>
 
         <encoder>
-            <pattern>%date %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>
+            <pattern>%contextName %date %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>
         </encoder>
     </appender>
 
@@ -183,6 +184,7 @@
         <!-- Host name/address and port number which Flentd placed -->
         <remoteHost>192.168.2.11</remoteHost>
         <port>12225</port>
+        <contextName>${HOSTNAME}</contextName>
 
         <!-- [Optional] Configurations to customize Fluency's behavior: https://github.com/komamitsu/fluency#usage  -->
         <ackResponseMode>false</ackResponseMode>
@@ -203,7 +205,7 @@
         <useEventTime>true</useEventTime>
 
         <encoder>
-            <pattern>%date %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>
+            <pattern>%contextName %date %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>
         </encoder>
     </appender>
 
