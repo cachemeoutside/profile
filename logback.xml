@@ -151,7 +151,6 @@
 
     <appender name="Fluency" class="ch.qos.logback.more.appenders.FluencyLogbackAppender">
         <filter class="edu.illinois.library.cantaloupe.logging.ApplicationLogFilter" />
-        <filter class="edu.illinois.library.cantaloupe.logging.ApplicationErrorLogFilter" />
         <!-- Host name/address and port number which Flentd placed -->
         <remoteHost>192.168.2.11</remoteHost>
         <port>12225</port>
