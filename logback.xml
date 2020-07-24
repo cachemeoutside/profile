@@ -150,8 +150,8 @@
     </if>
 
     <appender name="Fluency" class="ch.qos.logback.more.appenders.FluencyLogbackAppender">
-        <filter class="edu.illinois.library.cantaloupe.logging.ApplicationLogFilter" />
-        <filter class="edu.illinois.library.cantaloupe.logging.StandardOutputLogFilter" />
+<!--        <filter class="edu.illinois.library.cantaloupe.logging.ApplicationLogFilter" /> -->
+<!--        <filter class="edu.illinois.library.cantaloupe.logging.StandardOutputLogFilter" /> -->
         <!-- Host name/address and port number which Flentd placed -->
         <remoteHost>192.168.2.11</remoteHost>
         <port>12225</port>
@@ -180,8 +180,8 @@
     </appender>
 
     <appender name="FluencyError" class="ch.qos.logback.more.appenders.FluencyLogbackAppender">
-        <filter class="edu.illinois.library.cantaloupe.logging.ApplicationErrorLogFilter" />
-        <filter class="edu.illinois.library.cantaloupe.logging.StandardErrorLogFilter" />
+<!--        <filter class="edu.illinois.library.cantaloupe.logging.ApplicationErrorLogFilter" /> -->
+<!--        <filter class="edu.illinois.library.cantaloupe.logging.StandardErrorLogFilter" /> -->
         <!-- Host name/address and port number which Flentd placed -->
         <remoteHost>192.168.2.11</remoteHost>
         <port>12225</port>
@@ -292,7 +292,7 @@
             </then>
         </if>
         <appender-ref ref="Fluency" />
-        <appender-ref ref="FluencyError" />
+<!--        <appender-ref ref="FluencyError" /> -->
     </root>
 
 </configuration>
