@@ -235,6 +235,8 @@
 
     <appender name="FLUENCY" class="ch.qos.logback.more.appenders.FluencyLogbackAppender">
         <filter class="edu.illinois.library.cantaloupe.logging.ApplicationLogFilter" />
+        <filter class="edu.illinois.library.cantaloupe.logging.StandardOutputLogFilter" />
+        <filter class="edu.illinois.library.cantaloupe.logging.StandardErrorLogFilter" />
         <!-- Host name/address and port number which Flentd placed -->
         <remoteHost>192.168.2.11</remoteHost>
         <port>12225</port>
@@ -252,8 +254,6 @@
         <waitUntilBufferFlushed>30</waitUntilBufferFlushed>
         <!-- Max wait until the flusher is terminated is 10 seconds (by default) -->
         <waitUntilFlusherTerminated>40</waitUntilFlusherTerminated>
-        <!-- Flush interval is 600ms (by default)-->
-        <flushIntervalMillis>200</flushIntervalMillis>
         <!-- Max retry of sending events is 8 (by default) -->
         <senderMaxRetryCount>12</senderMaxRetryCount>
         <!-- [Optional] Enable/Disable use of EventTime to get sub second resolution of log event date-time -->
