@@ -159,7 +159,7 @@
 
         <remoteHost>${FLUENCY_ENDPOINT}</remoteHost>
         <port>${FLUENCY_PORT}</port>
-<!--        <tag>TestIIIFCantaloupe</tag> -->
+        <tag>TestIIIFCantaloupe</tag>
 
         <!-- [Optional] Configurations to customize Fluency's behavior: https://github.com/komamitsu/fluency#usage  -->
         <ackResponseMode>false</ackResponseMode>
