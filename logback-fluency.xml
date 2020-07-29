@@ -153,7 +153,6 @@
     <variable name="FLUENCY_ENDPOINT" value="${FLUENCY_ENDPOINT:-FLUENCY_ENDPOINT}" />
     <variable name="FLUENCY_PORT" value="${FLUENCY_PORT:-FLUENCY_PORT}" />
     <variable name="FLUENCY_MSG_TAG" value="${FLUENCY_MSG_TAG:-FLUENCY_MSG_TAG}" />
-    <contextName>test-iiif</contextName>
 
     <appender name="Fluency" class="ch.qos.logback.more.appenders.FluencyLogbackAppender">
         <filter class="edu.illinois.library.cantaloupe.logging.ApplicationLogFilter" />
@@ -180,7 +179,8 @@
         <useEventTime>true</useEventTime>
 
         <encoder>
-            <pattern>%date %contextName %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>
+            <pattern>%contextName %d{HH:mm:ss.SSS} [%thread] %highlight(%-5level) %cyan(%logger{15}) - %msg%n</pattern>
+            <!-- <pattern>%date %contextName %level [%thread] %logger{10} [%file:%line] %msg%n</pattern> -->
         </encoder>
     </appender>
 
@@ -209,7 +209,8 @@
         <useEventTime>true</useEventTime>
 
         <encoder>
-            <pattern>${FLUENCY_MSG_TAG} $%date %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>
+            <pattern>%contextName %d{HH:mm:ss.SSS} [%thread] %highlight(%-5level) %cyan(%logger{15}) - %msg%n</pattern>
+            <!-- <pattern>$%date %contextName %level [%thread] %logger{10} [%file:%line] %msg%n</pattern> -->
         </encoder>
     </appender>
 
