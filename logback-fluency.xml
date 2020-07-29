@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <configuration>
 
+    <contextName>test-iiif</contextName>
     <appender name="AppStdoutLog" class="ch.qos.logback.core.ConsoleAppender">
         <target>System.out</target>
         <filter class="edu.illinois.library.cantaloupe.logging.ApplicationLogFilter" />
