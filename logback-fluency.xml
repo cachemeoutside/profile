@@ -209,7 +209,7 @@
         <senderMaxRetryCount>12</senderMaxRetryCount>
         <!-- [Optional] Enable/Disable use of EventTime to get sub second resolution of log event date-time -->
         <useEventTime>true</useEventTime>
-        <sslEnabled>true</sslEnabled>
+        <sslEnabled>false</sslEnabled>
 
         <encoder>
             <pattern>$%date %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>
